@@ -65,6 +65,18 @@
     <Compile Include="Cadastro\frmNacionalidades.Designer.cs">
       <DependentUpon>frmNacionalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro\frmNaturalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmNaturalidade.Designer.cs">
+      <DependentUpon>frmNaturalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.Designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Componentes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\frmNacionalidades.resx">
       <DependentUpon>frmNacionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmNaturalidade.resx">
+      <DependentUpon>frmNaturalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
