@@ -18,9 +18,9 @@ namespace AppModelo.View.Windows.Cadastro
         {
             InitializeComponent();
             txtId.Enabled = false;
-            var listaDeNacionalidades = _naturalidadeController.ObterTodasNaturalidade();
-            gvNaturalidade.DataSource = listaDeNacionalidades;
-            txtDescricao.Text.All(char.IsNumber)
+            var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidade();
+            gvNaturalidade.DataSource = listaDeNaturalidade;
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace AppModelo.View.Windows.Cadastro
 
             if (salvou)
             {
-                MessageBox.Show("Nacionalidade incluída com sucesso");
+                MessageBox.Show("Naturalidade incluída com sucesso");
                 txtDescricao.Text = string.Empty;
             }
 
@@ -39,9 +39,20 @@ namespace AppModelo.View.Windows.Cadastro
 
             } 
         }
-        
-        
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            if (txtDescricao.Text.All(char.IsNumber))
+            {
+                errorProvider1.SetError(txtDescricao, "Apenas letras são permitidas");
+            }
+            else
+            {
+                errorProvider1.SetError(txtDescricao, "");
+            }
+        }
     }
+    
 }      
     
    

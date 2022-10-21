@@ -28,34 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastrar uma nova naturalidade";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
@@ -85,7 +69,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(15, 26);
+            this.txtId.Location = new System.Drawing.Point(21, 26);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(160, 20);
             this.txtId.TabIndex = 5;
@@ -101,26 +85,15 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(15, 80);
+            this.txtDescricao.Location = new System.Drawing.Point(21, 80);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(160, 20);
             this.txtDescricao.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 142);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "ATIVO";
+            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(134, 167);
+            this.btnCadastrar.Location = new System.Drawing.Point(64, 133);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 9;
@@ -128,40 +101,39 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 202);
+            this.ClientSize = new System.Drawing.Size(475, 182);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gvNaturalidade);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

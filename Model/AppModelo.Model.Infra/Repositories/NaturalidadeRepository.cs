@@ -14,6 +14,7 @@ namespace AppModelo.Model.Infra.Repositories
     {
         public bool Inserir(string descricao)
         {
+            var dataCriacao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             var sql = $"INSERT INTO naturalidade(descricao) VALUES('{descricao}')";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
@@ -32,6 +33,7 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+
 
     }
 }
