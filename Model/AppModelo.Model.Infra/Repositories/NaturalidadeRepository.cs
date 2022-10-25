@@ -14,7 +14,9 @@ namespace AppModelo.Model.Infra.Repositories
     {
         public bool Inserir(string descricao)
         {
-            var dataCriacao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            string dataCriacao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string dataAltercao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
             var sql = $"INSERT INTO naturalidade(descricao) VALUES('{descricao}')";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
@@ -33,7 +35,27 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+        public NaturalidadeEntity ObterPorDescricao(string descricao)
+        {
+            var sql = $"SELECT id, descricao FROM naturalidade WHERE descricao = '{descricao}' ";
 
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
 
+            var resultado = conexaoBd.QuerySingleOrDefault<NaturalidadeEntity>(sql);
+
+            return resultado;
+
+        }
+        public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
+        {
+            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao ASC" +
+            "WHERE ativo = true";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
+
+            return resultado;
+        }
     }
 }

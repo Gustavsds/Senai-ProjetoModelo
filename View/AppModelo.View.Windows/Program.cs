@@ -1,4 +1,5 @@
 ﻿using AppModelo.View.Windows.Cadastro;
+using AppModelo.View.Windows.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AppModelo.View.Windows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStart());
+            Application.Run(new frmLogin());
         }
     }
 }
