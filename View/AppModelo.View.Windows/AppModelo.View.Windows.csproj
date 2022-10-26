@@ -90,6 +90,7 @@
     <Compile Include="frmRecuperarSenha.Designer.cs">
       <DependentUpon>frmRecuperarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ProibirNumeroNoTexto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastro\frmAtualizarDado.resx">

@@ -25,19 +25,18 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            var salvou = _naturalidadeController.Cadastrar(txtDescricao.Text);
-
-            if (salvou)
+            var temNumero = Helpers.Componentes.ProibirNumeroNoTexto(txtDescricao.Text);
+            if (temNumero)
             {
-                MessageBox.Show("Naturalidade incluída com sucesso");
-                txtDescricao.Text = string.Empty;
+                errorProvider1.SetError(txtDescricao, "Naturalidades geralmente não tem numero");
+                txtDescricao.Focus();
+                return;
             }
+            var controller = new NaturalidadeController();
+            var descricaoMaiuscula = txtDescricao.Text.ToUpper();
 
-            else
-            {
-                MessageBox.Show("Houve um erro ao salvar no banco de dados");
+            var resposta = controller.Cadastrar(descricaoMaiuscula, chkStatus.Checked);
 
-            } 
         }
 
         private void txtDescricao_TextChanged(object sender, EventArgs e)
@@ -45,10 +44,12 @@ namespace AppModelo.View.Windows.Cadastro
             if (txtDescricao.Text.All(char.IsNumber))
             {
                 errorProvider1.SetError(txtDescricao, "Apenas letras são permitidas");
+                btnCadastrar.Enabled = false;
             }
             else
             {
                 errorProvider1.SetError(txtDescricao, "");
+                btnCadastrar.Enabled = true;
             }
         }
     }

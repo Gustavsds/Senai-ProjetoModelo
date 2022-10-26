@@ -37,6 +37,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -93,11 +94,11 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(64, 133);
+            this.btnCadastrar.Location = new System.Drawing.Point(106, 131);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 9;
-            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.Text = "SALVAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
@@ -105,11 +106,25 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // chkStatus
+            // 
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Checked = true;
+            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.errorProvider1.SetIconAlignment(this.chkStatus, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
+            this.chkStatus.Location = new System.Drawing.Point(26, 134);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(50, 17);
+            this.chkStatus.TabIndex = 10;
+            this.chkStatus.Text = "Ativo";
+            this.chkStatus.UseVisualStyleBackColor = true;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 182);
+            this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
@@ -135,5 +150,6 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox chkStatus;
     }
 }

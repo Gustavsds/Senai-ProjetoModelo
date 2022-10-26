@@ -12,17 +12,14 @@ namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
-        public bool Inserir(string descricao)
+        public bool Inserir(string descricao, bool status)
         {
-            string dataCriacao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string dataAltercao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            var agora = DateTime.Now.ToString("u");
 
-            var sql = $"INSERT INTO naturalidade(descricao) VALUES('{descricao}')";
-
+            var sql = $"INSERT INTO naturalidade (descricao,  dataCriacao, dataAlteracao, ativo)  VALUES ('{descricao}', '{agora}', '{agora}', {status})";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
 
             var resultado = conexaoBd.Execute(sql);
-
             return resultado > 0;
         }
         public IEnumerable<NaturalidadeEntity> ObterTodos()
