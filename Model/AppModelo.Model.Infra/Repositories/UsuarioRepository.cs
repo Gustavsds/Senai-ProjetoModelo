@@ -19,5 +19,19 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.QuerySingleOrDefault<UsuarioEntity>(sql);
             return resultado;
         }
+        public UsuarioEntity ObterEmail(string usuario)
+        {
+            var sql = $"SELECT email, nome FROM usuarios WHERE email = '{usuario}';";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.QuerySingleOrDefault<UsuarioEntity>(sql);
+            return resultado;
+        }
+        public bool AtualizarSenha(string email, string novaSenha)
+        {
+            var sql = $"UPDATE usuario SET senha = '{novaSenha}' WHERE email = '{email}';";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
     }
 }
