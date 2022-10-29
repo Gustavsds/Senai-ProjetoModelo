@@ -11,6 +11,7 @@ namespace AppModelo.View.Windows.Cadastro
     public partial class frmCadastroFuncionario : Form
     {
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
         public frmCadastroFuncionario()
         {
@@ -19,26 +20,26 @@ namespace AppModelo.View.Windows.Cadastro
 
             cmbNacionalidade.DataSource = _nacionalidadeController.ObterTodasNacionalidades();
             cmbNacionalidade.DisplayMember = "Descricao";
+
+            cmbNaturalidade.DataSource = _naturalidadeController.ObterTodasNaturalidade();
+            cmbNaturalidade.DisplayMember = "Descricao";
         }
 
         private void btnPesquisarCep_Click(object sender, EventArgs e)
         {
-            //Classe instanciada
             var cepController = new ViaCepController();
-
-            //Recebo os dados do metódo para obter o endereço
             var endereco = cepController.Obter(txtCep.Text);
-
             txtEnderecoBairro.Text = endereco.Bairro;
             txtEnderecoLogradouro.Text = endereco.Logradouro;
             txtEnderecoMunicipio.Text = endereco.Localidade;
             txtEnderecoUf.Text = endereco.Uf;
+
         }
 
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             // primeira regra para verificar se o nome é < que 6 letras.
-            if(txtNome.Text.Length < 6)
+            if (txtNome.Text.Length < 6)
             {
                 errorProvider.SetError(txtNome, "Digite seu nome completo");
                 return;
@@ -68,7 +69,7 @@ namespace AppModelo.View.Windows.Cadastro
                 errorProvider.SetError(txtCpf, "CPF inválido!");
                 return;
             }
-            
+
             errorProvider.Clear();
         }
 
@@ -88,16 +89,23 @@ namespace AppModelo.View.Windows.Cadastro
 
         private void txtDataNascimento_Validated(object sender, EventArgs e)
         {
-            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
-            var dataHoje = DateTime.Now;
 
-            if(dataNascimento > dataHoje)
+            try
             {
+                var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+                var dataHoje = DateTime.Now;
                 errorProvider.SetError(txtDataNascimento, "Você não pode informar uma data de hoje");
-                return;
+
             }
 
-            errorProvider.Clear();
+            catch (Exception)
+            {
+                errorProvider.SetError(txtDataNascimento, "Data Invalida");
+            }
+
+
         }
+
     }
+
 }

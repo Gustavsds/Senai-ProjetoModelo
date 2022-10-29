@@ -364,6 +364,8 @@
             // cmbNacionalidade
             // 
             this.cmbNacionalidade.FormattingEnabled = true;
+            this.cmbNacionalidade.Items.AddRange(new object[] {
+            "SELECIONE"});
             this.cmbNacionalidade.Location = new System.Drawing.Point(17, 223);
             this.cmbNacionalidade.Name = "cmbNacionalidade";
             this.cmbNacionalidade.Size = new System.Drawing.Size(121, 28);
