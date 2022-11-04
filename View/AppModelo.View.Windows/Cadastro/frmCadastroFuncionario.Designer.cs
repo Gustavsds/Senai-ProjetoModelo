@@ -68,6 +68,7 @@
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -421,11 +422,21 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Location = new System.Drawing.Point(186, 543);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(355, 37);
+            this.btnCadastrar.TabIndex = 39;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 550);
+            this.ClientSize = new System.Drawing.Size(772, 592);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtTelefoneContato);
@@ -517,5 +528,6 @@
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }
