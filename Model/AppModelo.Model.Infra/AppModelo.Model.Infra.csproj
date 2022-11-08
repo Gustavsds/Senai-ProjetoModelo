@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="_Sql\create_table_funcionario.sql" />
     <Content Include="_Sql\create_table_nacionalidades.sql" />
     <Content Include="_Sql\create_table_naturalidade.sql" />
   </ItemGroup>

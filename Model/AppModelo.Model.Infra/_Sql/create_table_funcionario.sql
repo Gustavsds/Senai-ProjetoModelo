@@ -5,8 +5,8 @@ CREATE TABLE funcionario
   data_nascimento datetime NOT NULL,  
   sexo tinyint NOT NULL,
   cpf varchar(14) NOT NULL,
-  nacionalidade varchar(150) NOT NULL,
-  naturalidade varchar(150),
+  nacionalidade int,
+  naturalidade int,
   email varchar(150) NOT NULL,
   telefone varchar(14) NOT NULL,
   telefone_contato varchar(14),
@@ -17,5 +17,7 @@ CREATE TABLE funcionario
   bairro varchar(100) NOT NULL,
   municipio varchar(100) NOT NULL,
   uf varchar(2) NOT NULL,
-    CONSTRAINT pk_nacionalidades_id PRIMARY KEY (id)
+    CONSTRAINT pk_nacionalidade_id PRIMARY KEY (id),
+    FOREIGN KEY (nacionalidade) REFERENCES nacionalidade (id),
+    FOREIGN KEY (naturalidade) REFERENCES naturalidade (id)
 );

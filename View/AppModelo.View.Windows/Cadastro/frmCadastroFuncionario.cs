@@ -1,15 +1,18 @@
 ﻿using AppModelo.Controller.Cadastros;
 using AppModelo.Controller.External;
 using AppModelo.Model.Domain.Validators;
+using AppModelo.Model.Infra.Repositories;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
+using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastro
 {
     public partial class frmCadastroFuncionario : Form
     {
+        private FuncionarioController _funcionarioController = new FuncionarioController(); 
         private NacionalidadeController _nacionalidadeController = new NacionalidadeController();
         private NaturalidadeController _naturalidadeController = new NaturalidadeController();
 
@@ -106,6 +109,12 @@ namespace AppModelo.View.Windows.Cadastro
 
         }
 
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            var enderecoNumero = int.Parse(txtEnderecoNumero.Text); 
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, enderecoNumero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, cmbNacionalidade, cmbNaturalidade);
+        }
     }
 
 }
