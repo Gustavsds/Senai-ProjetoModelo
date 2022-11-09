@@ -15,7 +15,7 @@ namespace AppModelo.Model.Infra.Repositories
         {
             var dataConvertida = dataNascimento.ToString("yyyy-MM-dd");
 
-            var sql = $"INSERT INTO funcionarios (nomeCompleto, dataNascimento, sexo, email, telefone, telefoneContato, cep, logradouro, numero, complemento, bairro, municipio, uf, fk_nacionalidade, fk_naturalidade) VALUES ('{nomeCompleto}', '{dataConvertida}', {sexo}, '{email}', '{telefone}', '{telefoneContato}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{municipio}', '{uf}', {nacionalidade}, {naturalidade})";
+            var sql = $"INSERT INTO funcionario (nome_completo, data_nascimento, sexo, email, telefone, telefone_contato, cep, logradouro, numero_endereco, complemento, bairro, municipio, uf, nacionalidade, naturalidade) VALUES ('{nomeCompleto}', '{dataConvertida}', {sexo}, '{email}', '{telefone}', '{telefoneContato}', '{cep}', '{logradouro}', {numero}, '{complemento}', '{bairro}', '{municipio}', '{uf}', {nacionalidade}, {naturalidade})";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
             var resultado = conexaoBd.Execute(sql);
 

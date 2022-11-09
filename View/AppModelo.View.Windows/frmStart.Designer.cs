@@ -28,59 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFuncionarios = new System.Windows.Forms.Button();
-            this.btnNacionalidade = new System.Windows.Forms.Button();
-            this.btnNaturalidade = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.naturalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.naturalidadeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnFuncionarios
+            // menuStrip1
             // 
-            this.btnFuncionarios.Location = new System.Drawing.Point(31, 49);
-            this.btnFuncionarios.Name = "btnFuncionarios";
-            this.btnFuncionarios.Size = new System.Drawing.Size(192, 23);
-            this.btnFuncionarios.TabIndex = 0;
-            this.btnFuncionarios.Text = "FUNCIONARIOS";
-            this.btnFuncionarios.UseVisualStyleBackColor = true;
-            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem,
+            this.atualizarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(776, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnNacionalidade
+            // cadastroToolStripMenuItem
             // 
-            this.btnNacionalidade.Location = new System.Drawing.Point(31, 87);
-            this.btnNacionalidade.Name = "btnNacionalidade";
-            this.btnNacionalidade.Size = new System.Drawing.Size(192, 23);
-            this.btnNacionalidade.TabIndex = 1;
-            this.btnNacionalidade.Text = "NACIONALIDADE";
-            this.btnNacionalidade.UseVisualStyleBackColor = true;
-            this.btnNacionalidade.Click += new System.EventHandler(this.btnNacionalidade_Click);
+            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarFuncionarioToolStripMenuItem,
+            this.nacionalidadeToolStripMenuItem,
+            this.naturalidadeToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
-            // btnNaturalidade
+            // cadastrarFuncionarioToolStripMenuItem
             // 
-            this.btnNaturalidade.Location = new System.Drawing.Point(31, 130);
-            this.btnNaturalidade.Name = "btnNaturalidade";
-            this.btnNaturalidade.Size = new System.Drawing.Size(192, 23);
-            this.btnNaturalidade.TabIndex = 2;
-            this.btnNaturalidade.Text = "NATURALIDADE";
-            this.btnNaturalidade.UseVisualStyleBackColor = true;
-            this.btnNaturalidade.Click += new System.EventHandler(this.btnNaturalidade_Click);
+            this.cadastrarFuncionarioToolStripMenuItem.Name = "cadastrarFuncionarioToolStripMenuItem";
+            this.cadastrarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.cadastrarFuncionarioToolStripMenuItem.Text = "Cadastrar Funcionario";
+            // 
+            // nacionalidadeToolStripMenuItem
+            // 
+            this.nacionalidadeToolStripMenuItem.Name = "nacionalidadeToolStripMenuItem";
+            this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.nacionalidadeToolStripMenuItem.Text = "Nacionalidade";
+            // 
+            // naturalidadeToolStripMenuItem
+            // 
+            this.naturalidadeToolStripMenuItem.Name = "naturalidadeToolStripMenuItem";
+            this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.naturalidadeToolStripMenuItem.Text = "Naturalidade";
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nacionalidadeToolStripMenuItem1,
+            this.naturalidadeToolStripMenuItem1});
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            // 
+            // nacionalidadeToolStripMenuItem1
+            // 
+            this.nacionalidadeToolStripMenuItem1.Name = "nacionalidadeToolStripMenuItem1";
+            this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.nacionalidadeToolStripMenuItem1.Text = "Nacionalidade";
+            // 
+            // naturalidadeToolStripMenuItem1
+            // 
+            this.naturalidadeToolStripMenuItem1.Name = "naturalidadeToolStripMenuItem1";
+            this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.naturalidadeToolStripMenuItem1.Text = "Naturalidade";
             // 
             // frmStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 218);
-            this.Controls.Add(this.btnNaturalidade);
-            this.Controls.Add(this.btnNacionalidade);
-            this.Controls.Add(this.btnFuncionarios);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.ClientSize = new System.Drawing.Size(776, 425);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmStart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStart";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnFuncionarios;
-        private System.Windows.Forms.Button btnNacionalidade;
-        private System.Windows.Forms.Button btnNaturalidade;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nacionalidadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem naturalidadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nacionalidadeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem naturalidadeToolStripMenuItem1;
     }
 }

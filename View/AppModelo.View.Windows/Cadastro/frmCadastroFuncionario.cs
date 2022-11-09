@@ -113,7 +113,7 @@ namespace AppModelo.View.Windows.Cadastro
         {
             var dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
             var enderecoNumero = int.Parse(txtEnderecoNumero.Text); 
-            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, enderecoNumero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, cmbNacionalidade, cmbNaturalidade);
+            var salvou = _funcionarioController.Cadastrar(txtNome.Text, dataNascimento, rbMasculino.Checked, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtCep.Text, txtEnderecoLogradouro.Text, enderecoNumero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text, cmbNacionalidade.SelectedIndex + 1, cmbNaturalidade.SelectedIndex +1);
         }
     }
 

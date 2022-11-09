@@ -160,7 +160,7 @@
             // txtDataNascimento
             // 
             this.txtDataNascimento.Location = new System.Drawing.Point(314, 156);
-            this.txtDataNascimento.Mask = "00/00/0000";
+            this.txtDataNascimento.Mask = "0000/00/00";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(154, 27);
             this.txtDataNascimento.TabIndex = 8;
