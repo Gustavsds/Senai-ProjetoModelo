@@ -1,5 +1,4 @@
 ﻿using AppModelo.Controller.Cadastros;
-using AppModelo.Model.Infra.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,16 +11,14 @@ using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Cadastro
 {
-    public partial class frmAtualizarDado : Form
+    public partial class frmAtualizarDeletarNaturalidade : Form
     {
-        public frmAtualizarDado()
+        private NaturalidadeController _naturalidadeController = new NaturalidadeController();
+        public frmAtualizarDeletarNaturalidade()
         {
             InitializeComponent();
-        }
-
-        private void btnEnviar_Click(object sender, EventArgs e)
-        {
-            var atualizarDado = new NacionalidadeController();
+            var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidade();
+            gvNaturalidade.DataSource = listaDeNaturalidade;
         }
     }
 }

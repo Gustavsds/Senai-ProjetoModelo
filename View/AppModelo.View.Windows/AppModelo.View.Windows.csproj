@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro\frmAtualizarDado.cs">
+    <Compile Include="Cadastro\frmAtualizarDeletarNacionalidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro\frmAtualizarDado.Designer.cs">
-      <DependentUpon>frmAtualizarDado.cs</DependentUpon>
+    <Compile Include="Cadastro\frmAtualizarDeletarNacionalidade.Designer.cs">
+      <DependentUpon>frmAtualizarDeletarNacionalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\frmAtualizarDeletarNaturalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmAtualizarDeletarNaturalidade.Designer.cs">
+      <DependentUpon>frmAtualizarDeletarNaturalidade.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastro\frmCadastroFuncionario.cs">
       <SubType>Form</SubType>
@@ -93,8 +99,11 @@
     <Compile Include="Helpers\ProibirNumeroNoTexto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastro\frmAtualizarDado.resx">
-      <DependentUpon>frmAtualizarDado.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro\frmAtualizarDeletarNacionalidade.resx">
+      <DependentUpon>frmAtualizarDeletarNacionalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmAtualizarDeletarNaturalidade.resx">
+      <DependentUpon>frmAtualizarDeletarNaturalidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\frmCadastroFuncionario.resx">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>

@@ -17,7 +17,7 @@ CREATE TABLE funcionario
   bairro varchar(100) NOT NULL,
   municipio varchar(100) NOT NULL,
   uf varchar(2) NOT NULL,
-    CONSTRAINT pk_nacionalidade_id PRIMARY KEY (id),
-    FOREIGN KEY (nacionalidade) REFERENCES nacionalidade (id),
-    FOREIGN KEY (naturalidade) REFERENCES naturalidade (id)
+  CONSTRAINT pk_nacionalidade_id PRIMARY KEY (id),
+  FOREIGN KEY (nacionalidade) REFERENCES nacionalidade (id),
+  FOREIGN KEY (naturalidade) REFERENCES naturalidade (id)
 );

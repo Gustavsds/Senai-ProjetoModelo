@@ -65,18 +65,21 @@
             this.cadastrarFuncionarioToolStripMenuItem.Name = "cadastrarFuncionarioToolStripMenuItem";
             this.cadastrarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.cadastrarFuncionarioToolStripMenuItem.Text = "Cadastrar Funcionario";
+            this.cadastrarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionarioToolStripMenuItem_Click);
             // 
             // nacionalidadeToolStripMenuItem
             // 
             this.nacionalidadeToolStripMenuItem.Name = "nacionalidadeToolStripMenuItem";
             this.nacionalidadeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.nacionalidadeToolStripMenuItem.Text = "Nacionalidade";
+            this.nacionalidadeToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem_Click);
             // 
             // naturalidadeToolStripMenuItem
             // 
             this.naturalidadeToolStripMenuItem.Name = "naturalidadeToolStripMenuItem";
             this.naturalidadeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.naturalidadeToolStripMenuItem.Text = "Naturalidade";
+            this.naturalidadeToolStripMenuItem.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem_Click);
             // 
             // atualizarToolStripMenuItem
             // 
@@ -92,12 +95,14 @@
             this.nacionalidadeToolStripMenuItem1.Name = "nacionalidadeToolStripMenuItem1";
             this.nacionalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.nacionalidadeToolStripMenuItem1.Text = "Nacionalidade";
+            this.nacionalidadeToolStripMenuItem1.Click += new System.EventHandler(this.nacionalidadeToolStripMenuItem1_Click);
             // 
             // naturalidadeToolStripMenuItem1
             // 
             this.naturalidadeToolStripMenuItem1.Name = "naturalidadeToolStripMenuItem1";
             this.naturalidadeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.naturalidadeToolStripMenuItem1.Text = "Naturalidade";
+            this.naturalidadeToolStripMenuItem1.Click += new System.EventHandler(this.naturalidadeToolStripMenuItem1_Click);
             // 
             // frmStart
             // 

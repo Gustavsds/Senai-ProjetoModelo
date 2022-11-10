@@ -18,22 +18,40 @@ namespace AppModelo.View.Windows
             InitializeComponent();
         }
 
-        private void btnFuncionarios_Click(object sender, EventArgs e)
+        private void nacionalidadeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new frmAtualizarDeletarNacionalidade();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void cadastrarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmCadastroFuncionario();
+            form.MdiParent = this;
             form.Show();
         }
 
-        private void btnNacionalidade_Click(object sender, EventArgs e)
+        private void nacionalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmNacionalidades();
+            form.MdiParent = this;
             form.Show();
         }
 
-        private void btnNaturalidade_Click(object sender, EventArgs e)
+        private void naturalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new frmNaturalidade();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void naturalidadeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var form = new frmAtualizarDeletarNaturalidade();
+            form.MdiParent = this;
             form.Show();
         }
     }
 }
+ 
