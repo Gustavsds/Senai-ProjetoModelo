@@ -33,9 +33,9 @@
             this.gvNaturalidade = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtIdDesejado = new System.Windows.Forms.TextBox();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.txtNovaDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
@@ -75,31 +75,32 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Digite o id que deseja alterar";
             // 
-            // textBox1
+            // txtIdDesejado
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(269, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(66, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtIdDesejado.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIdDesejado.Location = new System.Drawing.Point(269, 210);
+            this.txtIdDesejado.Name = "txtIdDesejado";
+            this.txtIdDesejado.Size = new System.Drawing.Size(66, 20);
+            this.txtIdDesejado.TabIndex = 3;
             // 
-            // button1
+            // btnAtualizar
             // 
-            this.button1.Location = new System.Drawing.Point(15, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Atualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Location = new System.Drawing.Point(15, 286);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(152, 32);
+            this.btnAtualizar.TabIndex = 4;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // button2
+            // btnDeletar
             // 
-            this.button2.Location = new System.Drawing.Point(183, 286);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDeletar.Location = new System.Drawing.Point(183, 286);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(152, 32);
+            this.btnDeletar.TabIndex = 5;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
             // 
             // txtNovaDescricao
             // 
@@ -125,14 +126,14 @@
             this.ClientSize = new System.Drawing.Size(347, 330);
             this.Controls.Add(this.txtNovaDescricao);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.txtIdDesejado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvNaturalidade);
             this.Name = "frmAtualizarDeletarNaturalidade";
-            this.Text = "frmAtualizarDeletarNacionalidade";
+            this.Text = "frmAtualizarDeletarNaturalidade";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,9 +146,9 @@
         private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtIdDesejado;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.TextBox txtNovaDescricao;
         private System.Windows.Forms.Label label3;
     }

@@ -53,5 +53,12 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+        public bool Atualizar(int id, string descricao)
+        {
+            var sql = $"UPDATE naturalidade SET descricao = '{descricao}' WHERE id = {id}";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+        }
     }
 }
