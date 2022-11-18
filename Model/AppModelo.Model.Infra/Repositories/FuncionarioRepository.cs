@@ -21,5 +21,13 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado > 0;
         }
+        public bool Deletar(int id)
+        {
+            var sql = $"DELETE FROM funcionario WHERE id = {id}";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConnectionString());
+            var resultado = conexaoBd.Execute(sql);
+            return resultado > 0;
+
+        }
     }
 }

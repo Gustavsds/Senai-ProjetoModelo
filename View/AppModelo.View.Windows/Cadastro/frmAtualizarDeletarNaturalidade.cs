@@ -39,5 +39,23 @@ namespace AppModelo.View.Windows.Cadastro
                 return;
             }
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int idDesejado = int.Parse(txtIdDesejado.Text);
+            var deletarNaturalidade = new NaturalidadeRepository();
+            var deletou = deletarNaturalidade.Deletar(idDesejado);
+            if (deletou)
+            {
+                MessageBox.Show("Atualizado com sucesso");
+                var listaDeNaturalidade = _naturalidadeController.ObterTodasNaturalidade();
+                gvNaturalidade.DataSource = listaDeNaturalidade;
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu algum erro");
+                return ;
+            }
+        }
     }
 }
